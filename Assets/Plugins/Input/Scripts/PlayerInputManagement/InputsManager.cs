@@ -39,6 +39,11 @@ public class InputsManager : MonoBehaviour
     get { return m_instance; }
   }
 
+  public HashSet<int> ActiveIndex
+  {
+    get { return _activeIndex; }
+  }
+
   void Awake()
   {
     if (m_instance == null)

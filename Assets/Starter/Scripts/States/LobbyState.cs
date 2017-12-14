@@ -9,7 +9,7 @@ namespace States
 
     public override string[] GetStaticSceneName()
     {
-      return new  string[]{"Menu"};
+      return new  string[]{"Menu", "PlayersInLobby"};
     }
 
     public override void OnEnter() 
