@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FxTemporaire
   - door
+  - trigger
   layers:
   - Default
   - TransparentFX
