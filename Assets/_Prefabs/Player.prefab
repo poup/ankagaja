@@ -238,12 +238,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c447d5e20c321dc45a7ff4986b43c504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_characterRenderTransform: {fileID: 4262759121571908}
   m_rigidBody: {fileID: 50075313073012682}
   m_animator: {fileID: 95183875855410280}
   m_speedMax: 10
   m_acceleration: 666
   m_playerContactFactor: 3
   m_dashDuration: 2
+  m_dashSpeedBonus: 0
+  m_dashWeightBonus: 0
+  m_jumpDuration: 0.4
+  m_jumpCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.007461548
+      inSlope: 5.7417016
+      outSlope: 5.7417016
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5
+      value: 0.9999969
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: -0.3964277
+      outSlope: -0.3964277
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!210 &210631956251761618
 SortingGroup:
   m_ObjectHideFlags: 1
