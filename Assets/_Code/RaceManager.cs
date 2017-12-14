@@ -20,7 +20,7 @@ namespace LimProject.Maximini.Race
 
 		#endregion
 
-		public CharacterMain _characterPrefab;
+		public PlayerController _characterPrefab;
 
 //    [SerializeField]
 //    private StartCountDown _countDownUI;    
@@ -116,7 +116,7 @@ namespace LimProject.Maximini.Race
 		private void InitializePlayers()
 		{
 			int i = 0;
-			var characters = new List<CharacterMain>();
+			var characters = new List<PlayerController>();
 
 //			if (PlayersManager.Instance.Players.Count == 0)
 				; //InputsManager.Instance.ForceCreateMainPlayer();

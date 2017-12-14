@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.PlayerManagement;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,10 +13,12 @@ public class PlayerController : MonoBehaviour
 	private float m_dirX; 
 	private float m_dirY;
 	
+	public PlayerInput Input { get; set; }
+	
 	void Update ()
 	{
-		var x = Input.GetAxis("Horizontal");
-		var y = Input.GetAxis("Vertical");
+		var x = Input.H1();
+		var y = Input.V1();
 		
 		var jump = Input.GetButton("Jump");
 		var dash = Input.GetButton("Fire1");

@@ -6,9 +6,9 @@ namespace LimProject.Maximini.Character
 	public class CharactersController
 	{
 
-		private List<CharacterMain> _characters;
+		private List<PlayerController> _characters;
 
-		public List<CharacterMain> Characters
+		public List<PlayerController> Characters
 		{
 			get { return _characters; }
 			set { _characters = value; }
@@ -26,15 +26,15 @@ namespace LimProject.Maximini.Character
 		{
 		}
 
-		private void PreUpdate(CharacterMain cMain)
+		private void PreUpdate(PlayerController cMain)
 		{
 		}
 
-		private void InternalUpdate(CharacterMain cMain)
+		private void InternalUpdate(PlayerController cMain)
 		{
 		}
 
-		private void PostUpdate(CharacterMain cMain)
+		private void PostUpdate(PlayerController cMain)
 		{
 		}
 
