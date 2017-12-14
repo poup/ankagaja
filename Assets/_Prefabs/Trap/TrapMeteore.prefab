@@ -98,7 +98,8 @@ MonoBehaviour:
   m_killingBoxPrefab:
   - {fileID: 114947463910806218, guid: d304b8803b9bed9468ee11cdbdaaf48e, type: 2}
   m_timeBetweenSpawn: 0.1
-  m_spawnNumber: 30
+  m_spawnNumberMin: 10
+  m_spawnNumberMax: 50
 --- !u!114 &114727951370119186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,4 +115,5 @@ MonoBehaviour:
   m_killingBoxPrefab:
   - {fileID: 114947463910806218, guid: d304b8803b9bed9468ee11cdbdaaf48e, type: 2}
   m_timeBetweenSpawn: 0.1
-  m_spawnNumber: 10
+  m_spawnNumberMin: 20
+  m_spawnNumberMax: 30

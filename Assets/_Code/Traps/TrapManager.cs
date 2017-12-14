@@ -28,6 +28,8 @@ public class TrapManager : MonoBehaviour
 		if (m_traps.Count == 0)
 			return;
 		var trap = GetRandomTrap();
+		Instantiate(trap, Vector3.zero, Quaternion.identity, transform);
+		
 		Debug.Log("trap started");
 	}
 }
