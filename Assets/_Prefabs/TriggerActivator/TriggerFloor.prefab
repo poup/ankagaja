@@ -11,22 +11,6 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1238285952328630}
   m_IsPrefabParent: 1
---- !u!1 &1006061474117164
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4595933455512890}
-  - component: {fileID: 61606408273897710}
-  m_Layer: 0
-  m_Name: collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1238285952328630
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4817214470253030}
   - component: {fileID: 114420434757537236}
+  - component: {fileID: 61027280900918958}
   m_Layer: 0
   m_Name: TriggerFloor
   m_TagString: trigger
@@ -72,19 +57,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4817214470253030}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4595933455512890
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1006061474117164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4817214470253030}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4817214470253030
@@ -97,17 +69,16 @@ Transform:
   m_LocalPosition: {x: 2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4595933455512890}
   - {fileID: 4336856075663762}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61606408273897710
+--- !u!61 &61027280900918958
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1006061474117164}
+  m_GameObject: {fileID: 1238285952328630}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -170,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 95331676384439366}
+  m_collider: {fileID: 61027280900918958}
 --- !u!212 &212627534853777532
 SpriteRenderer:
   m_ObjectHideFlags: 1

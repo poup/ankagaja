@@ -4,15 +4,13 @@ public class BaseTrigger : MonoBehaviour
 {
 
     [SerializeField] private Animator m_animator;
+    [SerializeField] private Collider2D m_collider;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!enabled)
-            return;
-        
         if (other.gameObject.CompareTag("Player"))
         {
-            enabled = false;
+            m_collider.enabled = false;
             var player = other.gameObject;
             ChangeAnimPlayer(player);
             ChangeAnimTrigger();
