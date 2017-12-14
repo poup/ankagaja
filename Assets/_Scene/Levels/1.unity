@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -334,6 +334,8 @@ MonoBehaviour:
   - {fileID: 2002007834}
   _lootsPrefabs:
   - {fileID: 1231985491070780, guid: fbaac78c392f9154a94993fbb85dd3b7, type: 2}
+  - {fileID: 1231985491070780, guid: d799fd5386cfac641acfe4d3c381af20, type: 2}
+  - {fileID: 1231985491070780, guid: 340d05b03a8f3b34db34383a9a8895dc, type: 2}
   _lootsCount: 10
   _minLimit: {x: -7.5, y: -5.5}
   _maxLimit: {x: 7.5, y: 5.5}

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 58955231892873202}
   - component: {fileID: 114583036081343426}
   m_Layer: 10
-  m_Name: Fruit_Small
+  m_Name: Fruit_Medium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.5
 --- !u!114 &114583036081343426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f2034ecb404c739d4c7ed85c9d92de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 100
+  value: 200
 --- !u!212 &212319111912238220
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -103,7 +103,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 08668e1d52ed7734a9cd3a382df1f02b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2728cc569ae3f2488b330969da6af05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
