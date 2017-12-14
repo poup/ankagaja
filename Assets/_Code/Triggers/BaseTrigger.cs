@@ -4,8 +4,8 @@ public class BaseTrigger : MonoBehaviour
 {
 
     [SerializeField] private Animator m_animator;
-    
-    private void OnCollisionEnter(Collision other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!enabled)
             return;
