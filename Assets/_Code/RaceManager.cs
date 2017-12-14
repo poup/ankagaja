@@ -118,7 +118,7 @@ namespace LimProject.Maximini.Race
 			int i = 0;
 			var characters = new List<CharacterMain>();
 
-			if (PlayersManager.Instance.Players.Count == 0)
+//			if (PlayersManager.Instance.Players.Count == 0)
 				; //InputsManager.Instance.ForceCreateMainPlayer();
 
 			foreach (var p in PlayersManager.Instance.Players)
