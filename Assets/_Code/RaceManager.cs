@@ -68,7 +68,7 @@ namespace LimProject.Maximini.Race
 
 		private void OnEnd()
 		{
-			FSM.Instance.GotoState<GameState>(new List<string>(){"1"}, true);
+			GameLoopManager.Instance.RoomEnded();
 		}
 
 		void Update()

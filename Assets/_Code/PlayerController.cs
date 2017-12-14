@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
 		var x = Input.H1();
 		var y = Input.V1();
 
-		var jump = Input.A();
-		var dash = Input.X();
+		var jump = Input.ADown();
+		var dash = Input.XDown();
 #else
 		var x = UnityEngine.Input.GetAxis("Horizontal") ;
 		var y = UnityEngine.Input.GetAxis("Vertical") ;

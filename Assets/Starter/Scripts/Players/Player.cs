@@ -49,4 +49,9 @@ public class Player
   {
     get { return _value; }
   }
+
+  public void Reset()
+  {
+    _value = 0;
+  }
 }

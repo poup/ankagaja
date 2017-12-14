@@ -21,12 +21,6 @@ EditorBuildSettings:
     path: Assets/_Scene/Race1.unity
     guid: c88aa4450e8e4d647b1e7ab64ec06e4c
   - enabled: 1
-    path: Assets/_Scene/Race2.unity
-    guid: 786417839472701489887530ccb12afd
-  - enabled: 1
-    path: Assets/_Scene/Race3.unity
-    guid: 1249f1b25057adb498af49aca25cd5fa
-  - enabled: 1
     path: Assets/_Scene/UI/PlayersInLobby.unity
     guid: f63eed746fda72a4996cdc8e41d5e1b7
   - enabled: 1
@@ -35,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scene/Levels/1.unity
     guid: 7cbce2a518a8d7644b81d51bb80c38a4
+  - enabled: 1
+    path: Assets/_Scene/UI/GameResultUI.unity
+    guid: b573c476d316068489eb4383a4dacedf

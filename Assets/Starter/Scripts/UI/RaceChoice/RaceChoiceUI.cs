@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets._Code;
 using States;
 using UnityEngine;
 
@@ -70,8 +71,9 @@ public class RaceChoiceUI : MonoBehaviour
 				_lastChangeTime = Time.time;
 			}
 
-			if (mainPlayerInput.Get.A())
+			if (mainPlayerInput.Get.ADown())
 			{
+				GameLoopManager.Instance.Reset();
 				FSM.Instance.GotoState<GameState>(
 					new List<string>(){	_raceNames[_currentSelectedRaceIndex]	}
 				);
