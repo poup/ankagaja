@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50075313073012682}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,10 +148,10 @@ Rigidbody2D:
   m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b82ab991e4eac1545a0bf80b182bb2e3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!60 &60606855756394812
 PolygonCollider2D:
@@ -239,7 +239,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_rigidBody: {fileID: 50075313073012682}
   m_animator: {fileID: 95183875855410280}
-  m_speedMax: 12
+  m_speedMax: 10
+  m_acceleration: 666
+  m_playerContactFactor: 3
   m_dashDuration: 2
 --- !u!212 &212148191915057820
 SpriteRenderer:

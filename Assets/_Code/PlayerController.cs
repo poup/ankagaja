@@ -1,4 +1,4 @@
-﻿using Assets.Scripts.PlayerManagement;
+﻿﻿using Assets.Scripts.PlayerManagement;
 ﻿using UnityEditor;
 using UnityEngine;
 
@@ -36,11 +36,21 @@ public class PlayerController : MonoBehaviour
 
 	void Update ()
 	{
-		var x = Input.H1();
+		
+		#if TOTO
+		var x = Input.H1() ;
 		var y = Input.V1();
 		
 		var jump = Input.A();
 		var dash = Input.X();
+	#else
+		var x = UnityEngine.Input.GetAxis("Horizontal") ;
+		var y = UnityEngine.Input.GetAxis("Vertical") ;
+
+
+		var jump = false;//Input.A();
+		var dash = false; // Input.X();
+		#endif
 		
 		
 		var isMoving = Mathf.Abs(x) > 0.01f || Mathf.Abs(y) > 0.01f;
@@ -82,7 +92,7 @@ public class PlayerController : MonoBehaviour
 	private void OnCollisionEnter2D(Collision2D other)
 	{
 		
-		if (other.gameObject.CompareTag("Player"))
+		if (other.gameObject.CompareTag("Player") && other.gameObject != gameObject)
 		{
 			if (other.contacts.Length > 0)
 			{
