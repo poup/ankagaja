@@ -33,3 +33,12 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Plugins/TextFx/3rd Party Asset Support/TextFx for Text Mesh Pro (Deprecated)(1.0.55.52.0b5).unitypackage.meta
+Assets/Plugins/TextFx/3rd Party Asset Support/TextFx for NGUI (3.2.9).unitypackage.meta
+Assets/Plugins/TextFx/3rd Party Asset Support/PlayMaker TextFx Actions.unitypackage.meta
+Assets/Plugins/Energy Bar Toolkit/EnergyBarToolkitPlaymaker.unitypackage.meta
+Assets/Plugins/Energy Bar Toolkit/EnergyBarToolkitDF-GUI.unitypackage.meta
+Assets/Plugins/TextFx/3rd Party Asset Support/TextFx for NGUI (3.11.3).unitypackage.meta
+Assets/Plugins/Energy Bar Toolkit/EnergyBarToolkitNGUI.unitypackage.meta
+Assets/Plugins/TextFx/3rd Party Asset Support/TextFx for Text Mesh Pro (1.0.55.xx.0b12).unitypackage.meta
+Assets/Plugins/Energy Bar Toolkit/Dreprecated/EnergyBarToolkitNGUI 3.0.8.unitypackage.meta
