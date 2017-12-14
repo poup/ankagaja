@@ -1,15 +1,16 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TrapSpawnOneByOne : BaseTrap
 {
     [SerializeField] protected float m_timeBetweenSpawn;
-    [SerializeField] protected int m_spawnNumber;
+    [SerializeField] protected int m_spawnNumberMin;
+    [SerializeField] protected int m_spawnNumberMax;
 
     protected override IEnumerator Spawn()
     {
-        for (int i = 0; i < m_spawnNumber; ++i)
+        var count = Randomizer.Next(m_spawnNumberMax - m_spawnNumberMin) + m_spawnNumberMin;
+        for (int i = 0; i < count; ++i)
         {
             SpawnOne();
             yield return new WaitForSeconds(m_timeBetweenSpawn);
@@ -17,4 +18,9 @@ public class TrapSpawnOneByOne : BaseTrap
     }
 
 
+    private void OnValidate()
+    {
+        if (m_spawnNumberMin > m_spawnNumberMax)
+            m_spawnNumberMax = m_spawnNumberMin;
+    }
 }

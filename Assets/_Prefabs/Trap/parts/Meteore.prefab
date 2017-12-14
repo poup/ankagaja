@@ -133,7 +133,7 @@ MonoBehaviour:
   m_activeDuration: 1.68
   m_waitBeforeDelete: 2.34
   m_collider: {fileID: 58658151124476132}
-  m_hitEffect: 0
+  m_effect: {fileID: 11400000, guid: 739b9a959db87bf4faeb9c5ea467b04b, type: 2}
 --- !u!212 &212157168679400168
 SpriteRenderer:
   m_ObjectHideFlags: 1

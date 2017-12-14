@@ -12,7 +12,7 @@ public class KillingBox : MonoBehaviour
 	[SerializeField] private float m_waitBeforeDelete;
 
 	[SerializeField] private Collider2D m_collider;
-	[SerializeField] private HitEffect m_hitEffect;
+	[SerializeField] private TrapEffect m_effect;
 
 
 	private void Awake()
@@ -22,10 +22,16 @@ public class KillingBox : MonoBehaviour
 	
 	private IEnumerator Start()
 	{
+		PlayAnimation();
 		yield return new WaitForSeconds(m_timeBeforeActivation);
 		m_collider.enabled = true;
 		if(m_activeDuration > 0)
 			StartCoroutine(StopDelayed());
+	}
+
+	private void PlayAnimation()
+	{
+		// TODO
 	}
 
 	private IEnumerator StopDelayed()
@@ -41,7 +47,7 @@ public class KillingBox : MonoBehaviour
 		if (other.gameObject.CompareTag("Player"))
 		{
 			var player = other.gameObject;
-			player.GetComponent<PlayerController>().OnEffect(m_hitEffect);
+			m_effect.ApplyOn(player);
 		}
 	}
 
