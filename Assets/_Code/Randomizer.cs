@@ -10,7 +10,13 @@ public static class Randomizer
         return m_random.Next(max);
     } 
 
-    public static T PickRandom<T>(this List<T> list)
+    public static T PickRandom<T>(this T[] list)
+    {
+        var index = m_random.Next(list.Length);
+        return list[index];
+        
+    }
+     public static T PickRandom<T>(this List<T> list)
     {
         var index = m_random.Next(list.Count);
         return list[index];

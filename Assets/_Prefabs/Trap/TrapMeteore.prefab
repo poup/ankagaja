@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4577821978479908}
   - component: {fileID: 114727951370119186}
+  - component: {fileID: 114702406283975702}
   m_Layer: 0
   m_Name: TrapMeteore
   m_TagString: Untagged
@@ -82,6 +83,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_radius: 3.31
+--- !u!114 &114702406283975702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363591993028840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba3bbbb70de48ba95b46e975d30cb18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_beforeSpawnDuration: 3.29
+  m_killingBoxPrefab:
+  - {fileID: 114947463910806218, guid: d304b8803b9bed9468ee11cdbdaaf48e, type: 2}
+  m_timeBetweenSpawn: 0.1
+  m_spawnNumber: 30
 --- !u!114 &114727951370119186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,8 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_beforeSpawnDuration: 0
+  m_killingBoxPrefab:
+  - {fileID: 114947463910806218, guid: d304b8803b9bed9468ee11cdbdaaf48e, type: 2}
   m_timeBetweenSpawn: 0.1
-  m_spawnNumber: 145
-  m_killingBoxPrefab: {fileID: 114947463910806218, guid: d304b8803b9bed9468ee11cdbdaaf48e,
-    type: 2}
-  m_spawnZone: {fileID: 114682192652814022}
+  m_spawnNumber: 10

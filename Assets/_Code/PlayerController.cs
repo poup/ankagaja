@@ -178,4 +178,9 @@ public class PlayerController : MonoBehaviour
 	{
 		Player.AddReward(value);
 	}
+
+	public void OnEffect(HitEffect hitEffect)
+	{
+		Debug.Log(name + " receive effect " + hitEffect);
+	}
 }
