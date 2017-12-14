@@ -6,8 +6,6 @@ public class TrapManager : MonoBehaviour
 
 	[SerializeField] private List<BaseTrap> m_traps = new List<BaseTrap>();
 
-	private readonly System.Random m_random = new System.Random();
-
 	public static TrapManager m_instance;
 	
 	public static TrapManager Instance
@@ -22,8 +20,7 @@ public class TrapManager : MonoBehaviour
 
 	public BaseTrap GetRandomTrap()
 	{
-		var index = m_random.Next(m_traps.Count);
-		return m_traps[index];
+		return m_traps.PickRandom();
 	}
 
 	public void StartTrap()
