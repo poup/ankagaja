@@ -17,6 +17,6 @@ public class PlayerController : MonoBehaviour
 		var x = Input.GetAxis("Horizontal");
 		var y = Input.GetAxis("Vertical");
 		
-		m_rigidBody.velocity = new Vector3(x, 0, y) * m_speedMax;
+		m_rigidBody.velocity = new Vector3(x, y, 0) * m_speedMax;
 	}
 }
