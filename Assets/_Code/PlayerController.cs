@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour
 		var x = Input.H1();
 		var y = Input.V1();
 		
-		var jump = Input.GetButton("Jump");
-		var dash = Input.GetButton("Fire1");
+		var jump = Input.A();
+		var dash = Input.X();
 		
 		
 		var isMoving = Mathf.Abs(x) > 0.01f && Mathf.Abs(y) > 0.01f;

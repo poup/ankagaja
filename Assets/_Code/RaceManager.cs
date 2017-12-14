@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Assets._Code;
 using DefaultNamespace;
 using LimProject.Maximini.Character;
 using States;
@@ -21,6 +22,8 @@ namespace LimProject.Maximini.Race
 		#endregion
 
 		public PlayerController _characterPrefab;
+		
+		private LevelData _data;
 
 //    [SerializeField]
 //    private StartCountDown _countDownUI;    
@@ -43,6 +46,9 @@ namespace LimProject.Maximini.Race
 		{
 			_charactersController = new CharactersController();
 
+			
+			_data = FindObjectOfType<LevelData>();
+			
 			InitializePlayers();
 			//InputsManager.Instance.AutoUpdate = false;
 
@@ -52,6 +58,8 @@ namespace LimProject.Maximini.Race
 
 //      _openRestartOrLeaveButton.onClick.AddListener(() =>
 //        _restartOrLeaveUI.gameObject.SetActive(!_restartOrLeaveUI.gameObject.activeSelf));
+			
+			
 		}
 
 		void Update()
@@ -135,7 +143,7 @@ namespace LimProject.Maximini.Race
 				character.Input = p.Input;
 //        controller.Color = p.Color;
 
-//        character.transform.position = _data.StartPoint.position;
+        character.transform.position = _data._spawPoints[i].position;
 
 				characters.Add(character);
 

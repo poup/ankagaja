@@ -19,8 +19,8 @@ public class InputsManager : MonoBehaviour
   public Transform NotificationContainer;
   public GameObject LeaveNotificationPrefab;
 
-  public Action<PlayerInput> OnNewPlayer;
-  public Action<PlayerInput> OnPlayerLeave;
+  public event Action<PlayerInput> OnNewPlayer;
+  public event Action<PlayerInput> OnPlayerLeave;
 
   private Dictionary<string,PlayerInput> _playersByPadIndex = new Dictionary<string, PlayerInput>();
   private PlayerInput _mainPlayerInput;

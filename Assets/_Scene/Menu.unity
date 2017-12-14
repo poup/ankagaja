@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _raceNames:
-  - Race1
+  - 1
   _raceButtonPrefab: {fileID: 114145682103755112, guid: 059be764252159546ac1e3be22822839,
     type: 2}
 --- !u!114 &1178384955

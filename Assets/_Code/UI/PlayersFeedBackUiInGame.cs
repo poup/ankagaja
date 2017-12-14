@@ -18,8 +18,8 @@ namespace Assets._Code.UI
 
 		private void Start()
 		{
-			InputsManager.Instance.OnNewPlayer = OnNewPlayer;
-			InputsManager.Instance.OnPlayerLeave = OnPlayerLeave;
+			InputsManager.Instance.OnNewPlayer += OnNewPlayer;
+			InputsManager.Instance.OnPlayerLeave += OnPlayerLeave;
 
 			foreach (var activeIndex in InputsManager.Instance.ActiveIndex)
 			{
