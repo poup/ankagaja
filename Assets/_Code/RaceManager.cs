@@ -33,6 +33,8 @@ namespace LimProject.Maximini.Race
 
 		private CharactersController _charactersController;
 
+		private float _currentTime;
+
 
 //    private RaceStateEnum _state = RaceStateEnum.Intro;
 
@@ -60,10 +62,23 @@ namespace LimProject.Maximini.Race
 //        _restartOrLeaveUI.gameObject.SetActive(!_restartOrLeaveUI.gameObject.activeSelf));
 
 			AddLoot();
+			_currentTime = 0;
+			_data._endTrigger.OnTriggerEnter += OnEnd;
+		}
+
+		private void OnEnd()
+		{
+			FSM.Instance.GotoState<GameState>(new List<string>(){"1"}, true);
 		}
 
 		void Update()
 		{
+			_currentTime += Time.deltaTime;
+			if (_currentTime > _data._time && _data._door.activeInHierarchy)
+			{
+				_data._door.SetActive(false);
+			}
+			
 //      if (InputsManager.Instance.MainPlayerInput.IsPresent && InputsManager.Instance.MainPlayerInput.Get.StartDown())
 //      {
 //        _restartOrLeaveUI.gameObject.SetActive(!_restartOrLeaveUI.gameObject.activeSelf);

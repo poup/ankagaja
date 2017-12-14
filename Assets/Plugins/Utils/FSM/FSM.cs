@@ -51,9 +51,9 @@ public class FSM : MonoBehaviour
 		
 	}
 
-	public T GotoState<T>(List<string> dynamicSceneNames =null) where T : AbstractState, new()
+	public T GotoState<T>(List<string> dynamicSceneNames =null, bool forceNewState=false) where T : AbstractState, new()
 	{
-		if (_currentState != null && _currentState is T)
+		if (_currentState != null && _currentState is T && !forceNewState)
 			return (T)_currentState;
 		
 		var state = new T();

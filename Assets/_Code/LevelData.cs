@@ -11,8 +11,16 @@ namespace Assets._Code
 
 		[SerializeField] public Vector2 _minLimit = new Vector2(-7.5f,-5.5f);
 		[SerializeField] public Vector2 _maxLimit= new Vector2(7.5f,5.5f);
+
+		[SerializeField] public GameObject _door;
 		
-		
-		
+		[SerializeField] public int _time;
+
+		[SerializeField] public Trigger _endTrigger;
+
+
+
+
+
 	}
 }
