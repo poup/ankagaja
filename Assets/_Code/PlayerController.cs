@@ -23,15 +23,6 @@ public class PlayerController : MonoBehaviour
 
 	private ContactPoint2D m_contact;
 
-	private void OnDrawGizmos()
-	{
-		var dir = m_contact.normal * m_contact.normalImpulse * m_playerContactFactor;
-		if (dir.magnitude > 0)
-		{
-			var pos = transform.position;
-			Gizmos.DrawLine(pos, pos + new Vector3(dir.x, dir.y, 0));
-		}
-	}
 
 	void Update()
 	{
@@ -66,8 +57,8 @@ public class PlayerController : MonoBehaviour
 
 		m_animator.SetFloat("moveX", x);
 		m_animator.SetFloat("moveY", y);
-		m_animator.SetFloat("dirX", x);
-		m_animator.SetFloat("dirY", y);
+		m_animator.SetFloat("dirX", m_dirX);
+		m_animator.SetFloat("dirY", m_dirY);
 
 		m_animator.SetBool("isMoving", isMoving);
 		m_animator.SetBool("isJumping", isJumping);
