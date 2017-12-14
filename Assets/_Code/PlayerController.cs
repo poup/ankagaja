@@ -2,7 +2,7 @@
 
 public class PlayerController : MonoBehaviour
 {
-	[SerializeField] private Rigidbody m_rigidBody;
+	[SerializeField] private Rigidbody2D m_rigidBody;
 	[SerializeField] private Animator m_animator;
 	[SerializeField] private float m_speedMax = 6.0f;
 	
