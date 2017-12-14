@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4817214470253030}
-  - component: {fileID: 114608034413488770}
+  - component: {fileID: 114420434757537236}
   m_Layer: 0
   m_Name: TriggerFloor
   m_TagString: trigger
@@ -158,7 +158,7 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &114608034413488770
+--- !u!114 &114420434757537236
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1238285952328630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee2feb094f954afcbc43de3a097b70b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9470ec4d9fd64ec3b2210ed2466618a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 95331676384439366}
