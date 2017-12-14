@@ -141,6 +141,7 @@ namespace LimProject.Maximini.Race
 			for (int i = 0; i < _data._lootsCount; i++)
 			{
 				var loot = GameObject.Instantiate(_data._lootsPrefabs[0]);
+				loot.transform.parent = _data._collectibleParent;
 				loot.transform.position = new Vector3(Random.Range(_data._minLimit.x,_data._maxLimit.x),Random.Range(_data._minLimit.y,_data._maxLimit.y),0);
 			}
 		}
@@ -169,6 +170,7 @@ namespace LimProject.Maximini.Race
 				
 //        controller.Color = p.Color;
 
+				character.transform.parent = _data._characterParent;
         character.transform.position = _data._spawPoints[i].position;
 
 				characters.Add(character);

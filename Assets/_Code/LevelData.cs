@@ -17,6 +17,11 @@ namespace Assets._Code
 		[SerializeField] public int _time;
 
 		[SerializeField] public Trigger _endTrigger;
+		
+		[SerializeField] public Transform _collectibleParent;
+		[SerializeField] public Transform _characterParent;
+		
+		
 
 
 
