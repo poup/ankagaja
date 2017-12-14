@@ -58,8 +58,8 @@ namespace LimProject.Maximini.Race
 
 //      _openRestartOrLeaveButton.onClick.AddListener(() =>
 //        _restartOrLeaveUI.gameObject.SetActive(!_restartOrLeaveUI.gameObject.activeSelf));
-			
-			
+
+			AddLoot();
 		}
 
 		void Update()
@@ -121,6 +121,15 @@ namespace LimProject.Maximini.Race
 			FSM.Instance.GotoState<LobbyState>();
 		}
 
+		private void AddLoot()
+		{
+			for (int i = 0; i < _data._lootsCount; i++)
+			{
+				var loot = GameObject.Instantiate(_data._lootsPrefabs[0]);
+				loot.transform.position = new Vector3(Random.Range(_data._minLimit.x,_data._maxLimit.x),Random.Range(_data._minLimit.y,_data._maxLimit.y),0);
+			}
+		}
+
 		private void InitializePlayers()
 		{
 			int i = 0;
@@ -141,6 +150,8 @@ namespace LimProject.Maximini.Race
 //        HandlerManager.Instance.CreateHandler(character,PatternEnum.Default);
 
 				character.Input = p.Input;
+				character.Player = p;
+				
 //        controller.Color = p.Color;
 
         character.transform.position = _data._spawPoints[i].position;

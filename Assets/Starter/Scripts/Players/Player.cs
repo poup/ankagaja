@@ -6,6 +6,8 @@ public class Player
   private readonly Color _color;
   private readonly PlayerInput _input;
 
+  private int _value;
+
   public Color Color
   {
     get { return _color; }
@@ -38,4 +40,13 @@ public class Player
 //  {
 //
 //  }
+  public void AddReward(int value)
+  {
+    _value += value;
+  }
+
+  public int Value
+  {
+    get { return _value; }
+  }
 }
