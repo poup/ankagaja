@@ -142,6 +142,11 @@ MonoBehaviour:
   m_waitBeforeDelete: 0
   m_collider: {fileID: 58955231892873202}
   value: 200
+  m_sprites:
+  - {fileID: 21300000, guid: 8be04ef1ff89c0a41b65ea3d1e7a7cac, type: 3}
+  - {fileID: 21300000, guid: eec483b9d7fb8c64e94a1b5edce85234, type: 3}
+  - {fileID: 21300000, guid: 416d3ad5ee425c942aaa431afe556645, type: 3}
+  m_renderer: {fileID: 212319111912238220}
 --- !u!212 &212319111912238220
 SpriteRenderer:
   m_ObjectHideFlags: 1

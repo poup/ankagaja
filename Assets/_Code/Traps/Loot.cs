@@ -7,8 +7,13 @@ namespace Assets._Code
 	{
 		[SerializeField] private int value;
 
+		[SerializeField] private Sprite[] m_sprites;
+		[SerializeField] private SpriteRenderer m_renderer;
+		
+
 		private IEnumerator Start()
 		{
+			m_renderer.sprite = m_sprites.PickRandom();
 			OnTriggerEnter += OnTrigger;
 			yield return base.Start();
 		}

@@ -78,10 +78,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7e7716ccf24214aac43d9f620cb33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_appearanceAnimation: 
+  m_playerAnimation: 
+  m_stopPlayerControl: 0
+  m_timeBeforeActivation: 0
+  m_activeDuration: 0
+  m_waitBeforeDelete: 0
+  m_collider: {fileID: 61708310260648372}
   _hitToDestroy: 10
   _loots:
   - {fileID: 114583036081343426, guid: fbaac78c392f9154a94993fbb85dd3b7, type: 2}
   _forceRatio: 1
+  _activeOnDash: 1
 --- !u!212 &212547448163557644
 SpriteRenderer:
   m_ObjectHideFlags: 1
