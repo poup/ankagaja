@@ -50,7 +50,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118312205433452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.58, y: 0, z: 0}
+  m_LocalPosition: {x: 10.58, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4577821978479908}
@@ -98,11 +98,11 @@ MonoBehaviour:
   m_killingBoxPrefab:
   - {fileID: 114326139512281084, guid: 753ec3049c37b7e4b816f646cd48d0cf, type: 2}
   m_waveCount: 10
-  m_timeBetweenWave: 1
-  m_timeBetweenSpawnMin: 0.04
-  m_timeBetweenSpawnMax: 0.06
-  m_spawnNumberMin: 40
-  m_spawnNumberMax: 50
+  m_timeBetweenWave: 0.5
+  m_timeBetweenSpawnMin: 0.1
+  m_timeBetweenSpawnMax: 0.15
+  m_spawnNumberMin: 10
+  m_spawnNumberMax: 15
   m_hasDirection: 1
   m_direction: {x: -1, y: 0}
   m_deadStateName: 
