@@ -1,0 +1,445 @@
+fileFormatVersion: 2
+guid: d89a8d6236702b04b864a14517d299da
+timeCreated: 1513364208
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Player_2_SpriteSheet_0
+    21300002: Player_2_SpriteSheet_1
+    21300004: Player_2_SpriteSheet_2
+    21300006: Player_2_SpriteSheet_3
+    21300008: Player_2_SpriteSheet_4
+    21300010: Player_2_SpriteSheet_5
+    21300012: Player_2_SpriteSheet_6
+    21300014: Player_2_SpriteSheet_7
+    21300016: Player_2_SpriteSheet_8
+    21300018: Player_2_SpriteSheet_9
+    21300020: Player_2_SpriteSheet_10
+    21300022: Player_2_SpriteSheet_11
+    21300024: Player_2_SpriteSheet_12
+    21300026: Player_2_SpriteSheet_13
+    21300028: Player_2_SpriteSheet_14
+    21300030: Player_2_SpriteSheet_15
+    21300032: Player_2_SpriteSheet_16
+    21300034: Player_2_SpriteSheet_17
+    21300036: Player_2_SpriteSheet_18
+    21300038: Player_2_SpriteSheet_19
+    21300040: Player_2_SpriteSheet_20
+    21300042: Player_2_SpriteSheet_21
+    21300044: Player_2_SpriteSheet_22
+    21300046: Player_2_SpriteSheet_23
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 397
+        width: 66
+        height: 95
+      alignment: 9
+      pivot: {x: 0.51447135, y: 0.060985364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 431
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 400
+        width: 66
+        height: 95
+      alignment: 9
+      pivot: {x: 0.47669935, y: 0.038650673}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 400
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 388
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 400
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 285
+        width: 65
+        height: 93
+      alignment: 9
+      pivot: {x: 0.50591475, y: 0.03699715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 302
+        width: 66
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 333
+        width: 66
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 187
+        width: 64
+        height: 95
+      alignment: 9
+      pivot: {x: 0.5120143, y: 0.046744417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 228
+        width: 61
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 201
+        width: 64
+        height: 95
+      alignment: 9
+      pivot: {x: 0.5, y: 0.050791368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 230
+        width: 65
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 115
+        width: 63
+        height: 93
+      alignment: 9
+      pivot: {x: 0.50610256, y: 0.045264952}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 187
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 199
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 47
+        width: 63
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 101
+        width: 62
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 90
+        width: 63
+        height: 88
+      alignment: 9
+      pivot: {x: 0.49999952, y: 0.06026511}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 17
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 15
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 25
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Player_2_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 13
+        width: 62
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
