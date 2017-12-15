@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4439707355107102}
-  - component: {fileID: 114682192652814022}
+  - component: {fileID: 114783775668295024}
   m_Layer: 0
   m_Name: spawnZone
   m_TagString: Untagged
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4577821978479908}
   - component: {fileID: 114727951370119186}
   m_Layer: 0
-  m_Name: TrapMeteore
+  m_Name: TrapChuteSol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,7 +50,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118312205433452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.08, y: 1.07, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4577821978479908}
@@ -70,18 +70,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114682192652814022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1118312205433452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3b61bed8044cf589bf59f9b22051eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_radius: 3.31
 --- !u!114 &114727951370119186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,8 +83,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_beforeSpawnDuration: 0
   m_killingBoxPrefab:
-  - {fileID: 114947463910806218, guid: d304b8803b9bed9468ee11cdbdaaf48e, type: 2}
-  m_timeBetweenSpawn: 0.1
-  m_spawnNumberMin: 20
-  m_spawnNumberMax: 30
+  - {fileID: 0}
+  m_waveCount: 10
+  m_timeBetweenWave: 0
+  m_timeBetweenSpawn: 0
+  m_spawnNumberMin: 10
+  m_spawnNumberMax: 20
   m_deadStateName: 
+--- !u!114 &114783775668295024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118312205433452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe85ccd672424bc4807b2193080c4793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_width: 16
+  m_height: 12

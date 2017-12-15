@@ -179,4 +179,9 @@ public class PlayerController : MonoBehaviour
 		Player.AddReward(value);
 	}
 
+	public void PlayAnimState(string animState)
+	{
+		m_animator.Play(animState);
+	}
+
 }

@@ -1,7 +1,8 @@
 ﻿using System.Collections;
+using Assets._Code;
 using UnityEngine;
 
-public class KillingBox : MonoBehaviour
+public class KillingBox : Trigger
 {
 	[SerializeField] private string m_appearanceAnimation; 
 	[SerializeField] private string m_playerAnimation; 
@@ -12,7 +13,6 @@ public class KillingBox : MonoBehaviour
 	[SerializeField] private float m_waitBeforeDelete;
 
 	[SerializeField] private Collider2D m_collider;
-	[SerializeField] private TrapEffect m_effect;
 
 
 	private void Awake()
@@ -40,15 +40,6 @@ public class KillingBox : MonoBehaviour
 		m_collider.enabled = false;
 		yield return new WaitForSeconds(m_waitBeforeDelete);
 		Destroy(gameObject);
-	}
-
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.CompareTag("Player"))
-		{
-			var player = other.gameObject;
-			m_effect.ApplyOn(player);
-		}
 	}
 
 	private void OnDrawGizmos()

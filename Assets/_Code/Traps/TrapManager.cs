@@ -6,7 +6,7 @@ public class TrapManager : MonoBehaviour
 
 	[SerializeField] private List<BaseTrap> m_traps = new List<BaseTrap>();
 
-	public static TrapManager m_instance;
+	private static TrapManager m_instance;
 	
 	public static TrapManager Instance
 	{
