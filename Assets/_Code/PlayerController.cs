@@ -1,6 +1,7 @@
 using Assets.Scripts.PlayerManagement;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.WSA;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,9 +16,12 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private float m_playerContactFactor = 1.0f;
 	
 	[SerializeField] private float m_dashDuration = 2.0f;
-	[SerializeField] private float m_dashSpeedBonus = 0.0f;
+	[SerializeField] private float m_dashSpeedBonus = 50.0f;
 	[SerializeField] private float m_dashWeightBonus = 0.0f;
+	[SerializeField] private float m_keepDashForce = 1.0f;
+	
 	private float m_dashTime = -1.0f;
+	private Vector2 m_currentDashDirection;
 	
 	
 	[SerializeField] private float m_jumpDuration = 1.0f;
@@ -38,6 +42,8 @@ public class PlayerController : MonoBehaviour
 	public bool IsJumping { get { return m_jumpTime >= 0;  } }
 	public bool IsDashing { get { return m_dashTime >= 0;  } }
 
+	private float m_currentMaxSpeed;
+
 	public float JumpingHeight
 	{
 		get
@@ -46,6 +52,11 @@ public class PlayerController : MonoBehaviour
 				return 0;
 			return m_jumpCurve.Evaluate(m_jumpTime / m_jumpDuration);
 		}
+	}
+
+	void Start()
+	{
+		m_currentMaxSpeed = m_speedMax;
 	}
 
 
@@ -68,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
 		var dt = Time.deltaTime;
 		DashingUpdate(dash, dt);
-		JumpingUpdate(jump, dt);
+	  JumpingUpdate(jump, dt);
 
 		var isMoving = Mathf.Abs(x) > 0.01f || Mathf.Abs(y) > 0.01f || IsDashing;
 
@@ -110,23 +121,48 @@ public class PlayerController : MonoBehaviour
 
 	private void DashingUpdate(bool dash, float dt)
 	{
-		var dashing = IsDashing;
-		if (!dashing && dash)
+		if (IsDashing)
 		{
-			m_dashTime = 0.0f;
-			dashing = true;
-		}
-		
-		if (dashing)
-		{
-			m_dashTime += dt;
-		}
-		if (m_dashTime > m_dashDuration)
-		{
-			m_dashTime = -1;
-		}
-	}
+			m_dashTime -= dt;
+			var speed = m_rigidBody.velocity.magnitude;
+			if (speed <= m_speedMax * 1.1)
+			{
+				m_dashTime = -1;
+				m_currentMaxSpeed = m_speedMax;
+			}
 
+			m_rigidBody.AddForce(m_currentDashDirection * dt * m_acceleration * m_keepDashForce,ForceMode2D.Force);
+			
+			return;
+		}
+
+		if (dash)
+		{
+			m_dashTime = 2.0f;
+
+			m_currentMaxSpeed = m_speedMax + m_dashSpeedBonus;
+
+			m_currentDashDirection = new Vector2(Input.H1(), Input.V1()).normalized;
+			m_rigidBody.AddForce(m_currentDashDirection * dt * m_acceleration * 25, ForceMode2D.Impulse);
+		}
+
+//		var dashing = IsDashing;
+//		if (!dashing && dash)
+//		{
+//			m_dashTime = 0.0f;
+//			dashing = true;
+//		}
+//		
+//		if (dashing)
+//		{
+//			m_dashTime += dt;
+//		}
+//		if (m_dashTime > m_dashDuration)
+//		{
+//			m_dashTime = -1;
+//		}
+	}
+//
 	private void JumpingUpdate(bool jump, float dt)
 	{
 		if (IsDashing)
@@ -154,25 +190,33 @@ public class PlayerController : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		_impactDelay -= Time.fixedDeltaTime;
+		if (IsDashing)
+			return;
+		
 		var move = new Vector2(m_moveX, m_moveY) * m_acceleration;
 		m_rigidBody.AddForce(move);
 
 		var speed = m_rigidBody.velocity.magnitude;
-		if (speed > m_speedMax)
+		if (speed > m_currentMaxSpeed && !IsDashing)
 		{
-			m_rigidBody.velocity = m_rigidBody.velocity.normalized * m_speedMax;
+			m_rigidBody.velocity = m_rigidBody.velocity.normalized * m_currentMaxSpeed;
 		}
 	}
 
+	private float _impactDelay = -1;
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.gameObject.CompareTag("Player") && other.gameObject != gameObject)
+		if (other.gameObject.CompareTag("Player") && other.gameObject != gameObject && _impactDelay<=0)
 		{
 			if (other.contacts.Length > 0)
 			{
+				m_dashTime = -1;
 				m_contact = other.contacts[0];
 				var contactFactor = m_playerContactFactor;
-				m_rigidBody.AddForce(m_contact.normal * m_contact.normalImpulse * contactFactor, ForceMode2D.Impulse);
+				m_rigidBody.AddForce(m_contact.normal.normalized * contactFactor, ForceMode2D.Impulse);
+				_impactDelay = 0.1f;
+				Debug.LogError(Time.time+" "+ m_contact.normal.normalized * contactFactor);
 			}
 		}
 	}
