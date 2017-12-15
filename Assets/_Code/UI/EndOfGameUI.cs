@@ -18,10 +18,18 @@ namespace Assets._Code.UI
             m_score1.text =m_score2.text =m_score3.text = m_score4.text = "";
             try
             {
-                m_score1.text = PlayersManager.Instance.Players[0].Value.ToString();
-                m_score2.text = PlayersManager.Instance.Players[1].Value.ToString();
-                m_score3.text = PlayersManager.Instance.Players[2].Value.ToString();
-                m_score4.text = PlayersManager.Instance.Players[3].Value.ToString();
+
+                foreach (var player in PlayersManager.Instance.Players)
+                {
+                    if (player.Input.InputIndex == 1)
+                        m_score1.text = player.Value.ToString();
+                    if (player.Input.InputIndex == 2)
+                        m_score2.text = player.Value.ToString();
+                    if (player.Input.InputIndex == 3)
+                        m_score3.text = player.Value.ToString();
+                    if (player.Input.InputIndex == 4)
+                        m_score4.text = player.Value.ToString();
+                }
             }catch(Exception ex) {}
         }
 
