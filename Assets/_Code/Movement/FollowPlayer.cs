@@ -32,13 +32,19 @@ namespace Assets._Code.Movement
 			var characters = new List<PlayerController>(RaceManager.Instance.CharactersController.Characters);
 
 			PlayerController chararc = null;
-			var currentDistance = int.MaxValue;
+			var currentDistance = float.MaxValue;
 			for (int i = 0; i < characters.Count; i++)
 			{
 				PlayerController c = characters[i];
+				if (c.IsDead)
+					continue;
+				
 				var d = (c.transform.position - transform.position).magnitude;
 				if (d < currentDistance)
+				{
 					chararc = c;
+					currentDistance = d;
+				}
 			}
 
 			return chararc;

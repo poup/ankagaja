@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
 	
 	public bool IsJumping { get { return m_jumpTime >= 0;  } }
 	public bool IsDashing { get { return m_dashTime >= 0;  } }
+	
+	public bool IsDead { get; set; }
 
 	private float m_currentMaxSpeed;
 
@@ -57,6 +59,7 @@ public class PlayerController : MonoBehaviour
 	void Start()
 	{
 		m_currentMaxSpeed = m_speedMax;
+		IsDead = false;
 	}
 
 

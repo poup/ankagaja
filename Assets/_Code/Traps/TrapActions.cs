@@ -44,6 +44,7 @@ namespace Assets._Code
 			{
 				player.AddReward(- RaceManager.Instance.Data._pointLostForDeath);
 				player.gameObject.SetActive(false);
+				player.IsDead = true;
 				player.StartCoroutine(WIP_Reactivate(player.gameObject));
             
 				player.PlayAnimState(spawner.m_deadStateName);
@@ -61,6 +62,7 @@ namespace Assets._Code
 			{
 				player.AddReward(- RaceManager.Instance.Data._pointLostForDeath);
 				player.gameObject.SetActive(false);
+				player.IsDead = true;
 				player.StartCoroutine(WIP_Reactivate(player.gameObject));
             
 				player.PlayAnimState(spawner.m_deadStateName);

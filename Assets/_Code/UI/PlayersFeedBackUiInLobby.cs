@@ -45,7 +45,11 @@ namespace Assets._Code.UI
 				_player[p.InputIndex-1].gameObject.SetActive(false);
 			}
 		}
-		
-		
+
+		private void OnDestroy()
+		{
+			InputsManager.Instance.OnNewPlayer -= OnNewPlayer;
+			InputsManager.Instance.OnPlayerLeave -= OnPlayerLeave;
+		}
 	}
 }
