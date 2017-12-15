@@ -85,8 +85,9 @@ MonoBehaviour:
   m_killingBoxPrefab:
   - {fileID: 0}
   m_waveCount: 10
-  m_timeBetweenWave: 0
-  m_timeBetweenSpawn: 0
+  m_timeBetweenWave: 2
+  m_timeBetweenSpawnMin: 0
+  m_timeBetweenSpawnMax: 0
   m_spawnNumberMin: 10
   m_spawnNumberMax: 20
   m_deadStateName: 

@@ -99,7 +99,8 @@ MonoBehaviour:
   - {fileID: 114947463910806218, guid: d304b8803b9bed9468ee11cdbdaaf48e, type: 2}
   m_waveCount: 10
   m_timeBetweenWave: 1
-  m_timeBetweenSpawn: 0.05
+  m_timeBetweenSpawnMin: 0.04
+  m_timeBetweenSpawnMax: 0.06
   m_spawnNumberMin: 40
   m_spawnNumberMax: 50
   m_deadStateName: 

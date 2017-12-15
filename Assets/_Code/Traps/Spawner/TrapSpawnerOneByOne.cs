@@ -7,7 +7,8 @@ public class TrapSpawnerOneByOne : TrapSpawner
     [SerializeField] protected float m_timeBetweenWave;
     
     [Space(10)]
-    [SerializeField] protected float m_timeBetweenSpawn;
+    [SerializeField] protected float m_timeBetweenSpawnMin;
+    [SerializeField] protected float m_timeBetweenSpawnMax;
     [SerializeField] protected int m_spawnNumberMin = 10;
     [SerializeField] protected int m_spawnNumberMax = 20;
     
@@ -22,7 +23,8 @@ public class TrapSpawnerOneByOne : TrapSpawner
             {
                 var obj = SpawnOne();
                 obj.OnTriggerEnter += ActivateKillingBox;
-                yield return new WaitForSeconds(m_timeBetweenSpawn);
+                var timeBetweenSpawn = Randomizer.Next(m_timeBetweenSpawnMin, m_timeBetweenSpawnMax);
+                yield return new WaitForSeconds(timeBetweenSpawn);
             }
             
             yield return new WaitForSeconds(m_timeBetweenWave);
