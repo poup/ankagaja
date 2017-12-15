@@ -36,8 +36,21 @@ public class TrapSpawnerOneByOne : TrapSpawner
         var player = triggerer.GetComponent<PlayerController>();
         if (player != null)
         {
+            player.gameObject.SetActive(false);
+            StartCoroutine(WIP_Reactivate(player.gameObject));
+            
             player.PlayAnimState(m_deadStateName);
         }
+    }
+
+    private IEnumerator WIP_Reactivate(GameObject go)
+    {
+        yield return new WaitForSeconds(0.1f);
+        go.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        go.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        go.gameObject.SetActive(true);
     }
 
 
