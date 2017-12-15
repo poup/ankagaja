@@ -101,7 +101,7 @@ MonoBehaviour:
   m_playerAnimation: falling
   m_stopPlayerControl: 1
   m_timeBeforeActivation: 1
-  m_activeDuration: 10000
+  m_activeDuration: 4
   m_waitBeforeDelete: 0
   m_collider: {fileID: 58942264180152224}
 --- !u!212 &212157168679400168
