@@ -32,7 +32,7 @@ namespace Assets._Code.Spawner
 			ApplyDirection(obj);
 			m_head = obj;
 			m_lavaCellCount--;
-
+			obj.transform.position = new Vector3((int)obj.transform.position.x, (int)obj.transform.position.y,0);
 			yield return new WaitForSeconds(m_timeBetweenSpawn);
 
 			while (m_lavaCellCount>0)
