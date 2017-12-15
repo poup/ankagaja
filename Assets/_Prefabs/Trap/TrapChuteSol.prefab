@@ -83,7 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_beforeSpawnDuration: 0
   m_killingBoxPrefab:
-  - {fileID: 0}
+  - {fileID: 114026378367257098, guid: 3cbeb6e571c99474c80c934bbf93e407, type: 2}
   m_deadStateName: 
   m_waveCount: 10
   m_timeBetweenWave: 2
