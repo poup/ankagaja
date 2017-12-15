@@ -1,8 +1,11 @@
 using Assets.Scripts.PlayerManagement;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
+	[SerializeField] private SpriteRenderer m_eyesInNight;
+	
 	[SerializeField] private Transform m_characterRenderTransform;
 	[SerializeField] private Rigidbody2D m_rigidBody;
 	[SerializeField] private Animator m_animator;
@@ -184,4 +187,9 @@ public class PlayerController : MonoBehaviour
 		m_animator.Play(animState);
 	}
 
+	public void ShowGrosYeux(bool show)
+	{
+		m_eyesInNight.gameObject.SetActive(show);
+		GetComponent<SortingGroup>().enabled = !show;
+	}
 }

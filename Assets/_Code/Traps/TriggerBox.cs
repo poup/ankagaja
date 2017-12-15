@@ -46,6 +46,8 @@ public class TriggerBox : Trigger
 
 	private void OnDrawGizmos()
 	{
+		if (m_collider == null)
+			return;
 		var color = Gizmos.color;
 		if (m_collider.enabled)
 		{
