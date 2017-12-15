@@ -34,10 +34,11 @@ public class TrapSpawnZoneCells : TrapSpawnZone
     {
         m_remains.Clear();
 
-        var maxX = Mathf.CeilToInt(m_width);
-        var maxY = Mathf.CeilToInt(m_height);
-        for (int x = 0; x < maxX; ++x)
-        for (int y = 0; y < maxY; ++y)
+        var minX = -Mathf.CeilToInt(m_width*0.5f);
+        var minY = -Mathf.CeilToInt(m_height*0.5f);
+        
+        for (int x = minX; x < minX + m_width; ++x)
+        for (int y = minY; y < minY + m_height; ++y)
         {
             m_remains.Add(new Vector2(x+0.5f, y+0.5f) + transform.position.ToVector2());
         }
