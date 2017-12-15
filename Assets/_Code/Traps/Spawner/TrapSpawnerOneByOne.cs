@@ -23,6 +23,8 @@ public class TrapSpawnerOneByOne : TrapSpawner
 	
 			[SerializeField] private bool m_dontTriggerInjump = false;
     
+    [SerializeField] private bool m_dontTriggerInjump = false;
+    
 
 
     protected override IEnumerator Spawn()
@@ -43,8 +45,13 @@ public class TrapSpawnerOneByOne : TrapSpawner
         }
     }
 
+    
     private void ActivateKillingBox(GameObject triggered, Collider2D triggerer)
     {
+        var characterController = triggerer.gameObject.GetComponent<PlayerController>();
+        if (characterController != null && m_dontTriggerInjump && characterController.IsJumping)
+            return;
+			
         TrapActions.DoAction(this, m_actionOnTrigger,triggered, triggerer );
     }
 
