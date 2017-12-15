@@ -3,20 +3,23 @@ using UnityEngine;
 
 namespace Assets._Code
 {
-	public class Loot : MonoBehaviour
+	public class Loot : TriggerBox
 	{
 		[SerializeField] private int value;
 
-		private void OnTriggerEnter2D(Collider2D other)
+		private IEnumerator Start()
 		{
-			if (other.gameObject.CompareTag("Player"))
+			OnTriggerEnter += OnTrigger;
+			yield return base.Start();
+		}
+
+		private void OnTrigger(GameObject triggered, Collider2D triggerer)
+		{
+			var playerController = triggerer.transform.GetComponent<PlayerController>();
+			if (playerController != null)
 			{
-				var playerController = other.transform.GetComponent<PlayerController>();
-				if (playerController != null)
-				{
-					playerController.AddReward(value);
-					StartCoroutine(AutoDestroy());
-				}
+				playerController.AddReward(value);
+				StartCoroutine(AutoDestroy());
 			}
 		}
 

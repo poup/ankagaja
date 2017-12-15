@@ -7,7 +7,7 @@ public abstract class TrapSpawner : BaseTrap
     // TODO ajouter sons 
     
     [SerializeField] protected float m_beforeSpawnDuration;
-    [SerializeField] protected KillingBox[] m_killingBoxPrefab;
+    [SerializeField] protected TriggerBox[] m_killingBoxPrefab;
     protected TrapSpawnZone[] m_spawnZones;
 
 
@@ -26,7 +26,7 @@ public abstract class TrapSpawner : BaseTrap
     }
     protected abstract IEnumerator Spawn();
     
-    protected KillingBox SpawnOne()
+    protected TriggerBox SpawnOne()
     {
         var spawnZone = m_spawnZones.PickRandom();
         var killingBoxPrefab = m_killingBoxPrefab.PickRandom();

@@ -167,6 +167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_traps:
   - {fileID: 114727951370119186, guid: 330dd205a32a7254aa7f2bcd610ca793, type: 2}
+  - {fileID: 114727951370119186, guid: 2b3275eeeaf78cd4688e90793381c2ee, type: 2}
+  - {fileID: 114727951370119186, guid: c68e4d1491bb7394e937064182f29f4f, type: 2}
 --- !u!1 &1268544820
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212319111912238220}
   - component: {fileID: 58955231892873202}
   - component: {fileID: 114583036081343426}
+  - component: {fileID: 50409786404319712}
   m_Layer: 10
   m_Name: Fruit_Small
   m_TagString: Untagged
@@ -29,6 +30,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1470180109713492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4654346722790456}
+  - component: {fileID: 58946176951200014}
+  m_Layer: 11
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4654346722790456
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470180109713492}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4835004316962478}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4835004316962478
 Transform:
   m_ObjectHideFlags: 1
@@ -38,10 +68,46 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.42309988, y: -0.56333756, z: -3.0460386}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4654346722790456}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50409786404319712
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231985491070780}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!58 &58946176951200014
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470180109713492}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!58 &58955231892873202
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -68,6 +134,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f2034ecb404c739d4c7ed85c9d92de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_appearanceAnimation: 
+  m_playerAnimation: 
+  m_stopPlayerControl: 0
+  m_timeBeforeActivation: 0
+  m_activeDuration: -1
+  m_waitBeforeDelete: 0
+  m_collider: {fileID: 58955231892873202}
   value: 100
 --- !u!212 &212319111912238220
 SpriteRenderer:

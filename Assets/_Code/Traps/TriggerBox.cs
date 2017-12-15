@@ -2,7 +2,7 @@
 using Assets._Code;
 using UnityEngine;
 
-public class KillingBox : Trigger
+public class TriggerBox : Trigger
 {
 	[SerializeField] private string m_appearanceAnimation; 
 	[SerializeField] private string m_playerAnimation; 
@@ -20,7 +20,9 @@ public class KillingBox : Trigger
 		m_collider.enabled = false;
 	}
 	
-	private IEnumerator Start()
+	
+	
+	protected virtual IEnumerator Start()
 	{
 		PlayAnimation();
 		yield return new WaitForSeconds(m_timeBeforeActivation);
