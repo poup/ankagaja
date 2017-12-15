@@ -1,19 +1,20 @@
-﻿using UnityEngine;
+﻿using Assets._Code.Movement;
+using UnityEngine;
 
+[RequireComponent(typeof(Directionable))]
 public class MoveInLine : MonoBehaviour
 {
-    public WrapMode m_wrapMode;
-    public Vector2 m_direction;
+    private Vector2 m_direction;
     public float m_speed;
-    public float m_duration;
 
-    public Rigidbody2D m_rigidBody;
-    
-    
-    
+	void Start()
+	{
+		m_direction = GetComponent<Directionable>().Direction;
+	}
 
     void FixedUpdate()
     {
-         // TODO   
+	    var move = m_direction.normalized * m_speed * Time.deltaTime;
+	    transform.position = transform.position + new Vector3(move.x, move.y, 0);
     }
 }

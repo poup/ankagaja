@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Assets._Code.Movement;
 using UnityEngine;
 
 public class TrapSpawnerOneByOne : TrapSpawner
@@ -12,6 +13,10 @@ public class TrapSpawnerOneByOne : TrapSpawner
     [SerializeField] protected int m_spawnNumberMin = 10;
     [SerializeField] protected int m_spawnNumberMax = 20;
     
+    [Space(10)]
+    [SerializeField] protected bool m_hasDirection;
+    [SerializeField] protected Vector2 m_direction;
+    
     [SerializeField] private string m_deadStateName;
 
     protected override IEnumerator Spawn()
@@ -22,12 +27,27 @@ public class TrapSpawnerOneByOne : TrapSpawner
             for (int i = 0; i < count; ++i)
             {
                 var obj = SpawnOne();
+                ApplyDirection(obj);
                 obj.OnTriggerEnter += ActivateKillingBox;
                 var timeBetweenSpawn = Randomizer.Next(m_timeBetweenSpawnMin, m_timeBetweenSpawnMax);
                 yield return new WaitForSeconds(timeBetweenSpawn);
             }
             
             yield return new WaitForSeconds(m_timeBetweenWave);
+        }
+    }
+
+    private void ApplyDirection(TriggerBox obj)
+    {
+
+        if (m_hasDirection )
+        {
+            var direction = obj.GetComponent<Directionable>();
+            if (direction)
+            {
+                direction.Direction = m_direction;
+            }
+            
         }
     }
 

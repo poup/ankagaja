@@ -15,6 +15,6 @@ public class TrapSpawnZoneRect : TrapSpawnZone
     {
         var x = m_width * (Random.value - 0.5f);
         var y = m_height * (Random.value - 0.5f);
-        return new Vector2(x, y);
+        return new Vector2(x, y) + transform.position.ToVector2();
     }
 }

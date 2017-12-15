@@ -39,7 +39,7 @@ public class TrapSpawnZoneCells : TrapSpawnZone
         for (int x = 0; x < maxX; ++x)
         for (int y = 0; y < maxY; ++y)
         {
-            m_remains.Add(new Vector2(x+0.5f, y+0.5f));
+            m_remains.Add(new Vector2(x+0.5f, y+0.5f) + transform.position.ToVector2());
         }
 
         m_remains.Shuffle();
