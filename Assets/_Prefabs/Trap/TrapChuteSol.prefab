@@ -86,11 +86,11 @@ MonoBehaviour:
   - {fileID: 114026378367257098, guid: 3cbeb6e571c99474c80c934bbf93e407, type: 2}
   m_deadStateName: 
   m_waveCount: 10
-  m_timeBetweenWave: 2
+  m_timeBetweenWave: 1
   m_timeBetweenSpawnMin: 0
   m_timeBetweenSpawnMax: 0
-  m_spawnNumberMin: 10
-  m_spawnNumberMax: 20
+  m_spawnNumberMin: 5
+  m_spawnNumberMax: 15
   m_hasDirection: 0
   m_direction: {x: 0, y: 0}
   m_actionOnTrigger: 2

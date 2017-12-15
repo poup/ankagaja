@@ -98,12 +98,13 @@ MonoBehaviour:
   m_killingBoxPrefab:
   - {fileID: 114326139512281084, guid: 753ec3049c37b7e4b816f646cd48d0cf, type: 2}
   m_deadStateName: 
-  m_waveCount: 10
+  m_waveCount: 5
   m_timeBetweenWave: 0.5
-  m_timeBetweenSpawnMin: 0.1
-  m_timeBetweenSpawnMax: 0.15
+  m_timeBetweenSpawnMin: 0.2
+  m_timeBetweenSpawnMax: 0.3
   m_spawnNumberMin: 10
   m_spawnNumberMax: 15
   m_hasDirection: 1
   m_direction: {x: 1, y: 0}
   m_actionOnTrigger: 1
+  m_dontTriggerInjump: 0
