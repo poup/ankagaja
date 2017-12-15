@@ -9,6 +9,9 @@ public abstract class TrapSpawner : BaseTrap
     [SerializeField] protected float m_beforeSpawnDuration;
     [SerializeField] protected TriggerBox[] m_killingBoxPrefab;
     protected TrapSpawnZone[] m_spawnZones;
+    
+    [Space(10)]
+    [SerializeField] public string m_deadStateName;
 
 
     protected virtual void Awake()

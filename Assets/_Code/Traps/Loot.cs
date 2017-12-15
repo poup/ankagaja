@@ -5,7 +5,7 @@ namespace Assets._Code
 {
 	public class Loot : TriggerBox
 	{
-		[SerializeField] private int value;
+		[SerializeField] public int value;
 
 		[SerializeField] private Sprite[] m_sprites;
 		[SerializeField] private SpriteRenderer m_renderer;

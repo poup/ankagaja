@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Assets._Code;
 using Assets._Code.Movement;
 using UnityEngine;
 
@@ -17,7 +18,10 @@ public class TrapSpawnerOneByOne : TrapSpawner
     [SerializeField] protected bool m_hasDirection;
     [SerializeField] protected Vector2 m_direction;
     
-    [SerializeField] private string m_deadStateName;
+    [Space(10)]
+    [SerializeField] protected TrapActions.TrapActionsType m_actionOnTrigger;
+    
+
 
     protected override IEnumerator Spawn()
     {
@@ -37,6 +41,21 @@ public class TrapSpawnerOneByOne : TrapSpawner
         }
     }
 
+    private void ActivateKillingBox(GameObject triggered, Collider2D triggerer)
+    {
+        TrapActions.DoAction(this, m_actionOnTrigger,triggered, triggerer );
+    }
+
+
+    private void OnValidate()
+    {
+        if (m_waveCount < 1)
+            m_waveCount = 1;
+        
+        if (m_spawnNumberMin > m_spawnNumberMax)
+            m_spawnNumberMax = m_spawnNumberMin;
+    }
+    
     private void ApplyDirection(TriggerBox obj)
     {
 
@@ -49,37 +68,5 @@ public class TrapSpawnerOneByOne : TrapSpawner
             }
             
         }
-    }
-
-    private void ActivateKillingBox(GameObject triggered, Collider2D triggerer)
-    {
-        var player = triggerer.GetComponent<PlayerController>();
-        if (player != null)
-        {
-            player.gameObject.SetActive(false);
-            StartCoroutine(WIP_Reactivate(player.gameObject));
-            
-            player.PlayAnimState(m_deadStateName);
-        }
-    }
-
-    private IEnumerator WIP_Reactivate(GameObject go)
-    {
-        yield return new WaitForSeconds(0.1f);
-        go.gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
-        go.gameObject.SetActive(false);
-        yield return new WaitForSeconds(0.1f);
-        go.gameObject.SetActive(true);
-    }
-
-
-    private void OnValidate()
-    {
-        if (m_waveCount < 1)
-            m_waveCount = 1;
-        
-        if (m_spawnNumberMin > m_spawnNumberMax)
-            m_spawnNumberMax = m_spawnNumberMin;
     }
 }
