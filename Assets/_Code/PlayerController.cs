@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
 	void Update()
 	{
-#if TOTO
+#if !TOTO
 		var x = Input.H1();
 		var y = Input.V1();
 
