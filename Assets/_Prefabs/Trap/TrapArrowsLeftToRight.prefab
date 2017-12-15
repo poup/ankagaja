@@ -102,8 +102,8 @@ MonoBehaviour:
   m_timeBetweenWave: 0.5
   m_timeBetweenSpawnMin: 0.1
   m_timeBetweenSpawnMax: 0.15
-  m_spawnNumberMin: 15
-  m_spawnNumberMax: 20
+  m_spawnNumberMin: 10
+  m_spawnNumberMax: 15
   m_hasDirection: 1
   m_direction: {x: 1, y: 0}
   m_actionOnTrigger: 1
