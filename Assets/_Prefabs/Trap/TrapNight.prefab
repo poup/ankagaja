@@ -183,15 +183,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b3623971054124876e93e008e3ce3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_durationBeforeActivation: 0
+  m_beforeSpawnDuration: 0
+  m_killingBoxPrefab:
+  - {fileID: 114326139512281084, guid: 8d991091233bde94c9163b42fdabb82d, type: 2}
+  m_deadStateName: 
   m_waitFullBlack: 0.8
   m_fadeInDuration: 0.3
   m_fadeOutDuration: 0.3
   m_duration: 8
   m_inNightStateName: 
   m_nightFilter: {fileID: 212342605222041406}
-  m_iaPrefab: {fileID: 1919039004868620, guid: 8d991091233bde94c9163b42fdabb82d, type: 2}
   m_iaCount: 4
+  m_actionOnTrigger: 1
 --- !u!114 &114764469871308778
 MonoBehaviour:
   m_ObjectHideFlags: 1
