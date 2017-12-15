@@ -61,26 +61,25 @@ public class TriggerBox : Trigger
 		if (m_collider is BoxCollider2D)
 		{
 			var c = m_collider as BoxCollider2D;
-			Gizmos.DrawWireCube(c.transform.position, c.size);
+			Gizmos.DrawWireCube(c.transform.position + c.offset.ToVector3(), c.size);
 		}
 		if (m_collider is CircleCollider2D)
 		{
 			var c = m_collider as CircleCollider2D;
-			Gizmos.DrawWireSphere(c.transform.position, c.radius);
+			Gizmos.DrawWireSphere(c.transform.position + c.offset.ToVector3(), c.radius);
 		}
 		if (m_collider is PolygonCollider2D)
 		{
 			var c = m_collider as PolygonCollider2D;
 			
 			Vector2[] points = c.points;
+			var origin = transform.position + c.offset.ToVector3();
  
-			// for every point (except for the last one), draw line to the next point
 			for(int i = 0; i < points.Length-1; i++)
 			{
-				Gizmos.DrawLine(transform.position + points[i].ToVector3(), transform.position + points[i+1].ToVector3());
+				Gizmos.DrawLine(origin + points[i].ToVector3(), origin + points[i+1].ToVector3());
 			}
-			// for polygons, close with the last segment
-			Gizmos.DrawLine(transform.position + points[points.Length - 1].ToVector3(), transform.position + points[0].ToVector3());
+			Gizmos.DrawLine(origin + points[points.Length - 1].ToVector3(), origin + points[0].ToVector3());
 		}
 		Gizmos.color = color;
 	}

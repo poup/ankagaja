@@ -154,7 +154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1387682660307336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4783808266064364}
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_playerAnimation: deathStandard
   m_stopPlayerControl: 1
   m_timeBeforeActivation: 1
-  m_activeDuration: 1
+  m_activeDuration: 0.3
   m_waitBeforeDelete: 0
   m_collider: {fileID: 58942264180152224}
 --- !u!198 &198015838884834060

@@ -368,7 +368,7 @@ MonoBehaviour:
   m_playerAnimation: deathStandard
   m_stopPlayerControl: 1
   m_timeBeforeActivation: 1
-  m_activeDuration: 1
+  m_activeDuration: 0.3
   m_waitBeforeDelete: 0
   m_collider: {fileID: 58942264180152224}
 --- !u!198 &198015838884834060
@@ -3664,7 +3664,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 188708316
+  randomSeed: 21666800
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6966,7 +6966,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1400310051
+  randomSeed: -1486447657
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10268,7 +10268,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 1478650787
+  randomSeed: -214905856
   InitialModule:
     serializedVersion: 3
     enabled: 1
