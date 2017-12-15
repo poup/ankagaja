@@ -38,6 +38,7 @@ namespace Assets._Code
 		{
 			var randomDirection = UnityEngine.Random.insideUnitCircle.normalized *  UnityEngine.Random.Range(1.5f,8f);
 			TriggerBox triggerBox = Instantiate(_loots.PickRandom(),transform.position,Quaternion.identity);
+			triggerBox.transform.parent = transform.parent;
 			var rb = triggerBox.GetComponent<Rigidbody2D>();
 			rb.AddForce(randomDirection * _forceRatio,ForceMode2D.Impulse);
 //			StartCoroutine(MoveLoot(triggerBox, 0.5f, transform.position + new Vector3(randomDirection.x, randomDirection.y,0)));

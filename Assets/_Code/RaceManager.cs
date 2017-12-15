@@ -33,6 +33,11 @@ namespace LimProject.Maximini.Race
 
 		private CharactersController _charactersController;
 
+		public CharactersController CharactersController
+		{
+			get { return _charactersController; }
+		}
+
 		private float _currentTime;
 
 
