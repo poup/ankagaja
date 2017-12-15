@@ -19,6 +19,10 @@ public class TrapGlobalFreeze : BaseTrap
         var players = FindObjectsOfType<PlayerController>();
         yield return new WaitForSeconds(m_durationBeforeActivation);
         
+        // TODO changer le glissement des persos
+        
+        // leur appliquer un effet gel
+        
         
     }
     

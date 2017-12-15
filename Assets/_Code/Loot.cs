@@ -9,7 +9,7 @@ namespace Assets._Code
 
 		private void OnTriggerEnter2D(Collider2D other)
 		{
-			if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+			if (other.gameObject.CompareTag("Player"))
 			{
 				var playerController = other.transform.GetComponent<PlayerController>();
 				if (playerController != null)

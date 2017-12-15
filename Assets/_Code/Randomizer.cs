@@ -1,30 +1,39 @@
-﻿using System;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 public static class Randomizer
 {
-    private static readonly Random m_random = new Random();
-
     public static int Next(int max)
     {
-        return m_random.Next(max);
+        return Random.Range(0, max);
+        
+    } 
+    
+    public static int Next(int min, int max)
+    {
+        return Random.Range(min, max);
+    } 
+    
+    public static float Next(float min, float max)
+    {
+        return Random.Range(min, max);
     } 
 
     public static T PickRandom<T>(this T[] list)
     {
-        var index = m_random.Next(list.Length);
+        var index = Next(list.Length);
         return list[index];
         
     }
      public static T PickRandom<T>(this List<T> list)
     {
-        var index = m_random.Next(list.Count);
+        var index = Next(list.Count);
         return list[index];
     }
     
     public static T PickAndRemoveRandom<T>(this List<T> list)
     {
-        var index = m_random.Next(list.Count);
+        var index = Next(list.Count);
         var value = list[index];
         list.RemoveAt(index);
         return value;
@@ -34,7 +43,7 @@ public static class Randomizer
     {
         for (int i = list.Count; i > 1; --i)
         {
-            var index = m_random.Next(i);
+            var index = Next(i);
             Swap(list, i - 1, index);
         }
     }
