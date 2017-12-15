@@ -20,6 +20,8 @@ public class TrapSpawnerOneByOne : TrapSpawner
     
     [Space(10)]
     [SerializeField] protected TrapActions.TrapActionsType m_actionOnTrigger;
+	
+			[SerializeField] private bool m_dontTriggerInjump = false;
     
 
 
