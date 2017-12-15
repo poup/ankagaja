@@ -102,5 +102,7 @@ MonoBehaviour:
   m_timeBetweenSpawnMin: 0.04
   m_timeBetweenSpawnMax: 0.06
   m_spawnNumberMin: 1
-  m_spawnNumberMax: 1
+  m_spawnNumberMax: 2
+  m_hasDirection: 0
+  m_direction: {x: 0, y: 0}
   m_deadStateName: 
