@@ -15,6 +15,8 @@ namespace Assets._Code.Spawner
 		[Space(10)]
 		[SerializeField] protected TrapActions.TrapActionsType m_actionOnTrigger;
 		
+		[SerializeField] private bool m_dontTriggerInjump = false;
+		
 		
 		protected Vector2 m_direction;
 		//private List<TriggerBox> m_heads = new List<TriggerBox>();
@@ -52,6 +54,10 @@ namespace Assets._Code.Spawner
 		
 		private void ActivateKillingBox(GameObject triggered, Collider2D triggerer)
 		{
+			var characterController = triggerer.gameObject.GetComponent<PlayerController>();
+			if (characterController != null && m_dontTriggerInjump && characterController.IsJumping)
+				return;
+			
 			TrapActions.DoAction(this, m_actionOnTrigger,triggered, triggerer );
 		}
 		
