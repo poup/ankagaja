@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Assets._Code;
 using DefaultNamespace;
 using LimProject.Maximini.Character;
@@ -179,6 +180,12 @@ namespace LimProject.Maximini.Race
 
 			_charactersController.Characters = characters;
 //      _camera.SetPlayerToFollow(characters.Select(c => (ICameraTarget)c).ToList());
+		}
+
+		public void CheckAllDead()
+		{
+			if(_charactersController.Characters.All(c => !c.gameObject.activeInHierarchy))
+				FSM.Instance.GotoState<EndGameState>(new List<string>(), true);
 		}
 	}
 }

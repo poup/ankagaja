@@ -47,6 +47,8 @@ namespace Assets._Code
 				player.StartCoroutine(WIP_Reactivate(player.gameObject));
             
 				player.PlayAnimState(spawner.m_deadStateName);
+
+				RaceManager.Instance.CheckAllDead();
 			}
 			
 			GameObject.Destroy(triggered.gameObject);
@@ -62,6 +64,7 @@ namespace Assets._Code
 				player.StartCoroutine(WIP_Reactivate(player.gameObject));
             
 				player.PlayAnimState(spawner.m_deadStateName);
+				RaceManager.Instance.CheckAllDead();
 			}
 		}
 		

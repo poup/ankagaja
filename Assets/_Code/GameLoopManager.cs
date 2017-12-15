@@ -32,14 +32,14 @@ namespace Assets._Code
 
 		public void RoomEnded()
 		{
-			if (_loopCount < 3)
+			if (_loopCount < 10)
 			{
 				FSM.Instance.GotoState<GameState>(new List<string>() {"1"}, true);
 				_loopCount++;
 			}
 			else
 			{
-				FSM.Instance.GotoState<EndGameState>(new List<string>() {"1"}, true);
+				FSM.Instance.GotoState<EndGameState>(new List<string>(), true);
 			}
 		}
 		
