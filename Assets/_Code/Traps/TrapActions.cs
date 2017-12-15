@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using LimProject.Maximini.Race;
 using NUnit.Framework.Constraints;
 using UnityEngine;
 
@@ -41,6 +42,7 @@ namespace Assets._Code
 			var player = triggerer.GetComponent<PlayerController>();
 			if (player != null)
 			{
+				player.AddReward(- RaceManager.Instance.Data._pointLostForDeath);
 				player.gameObject.SetActive(false);
 				player.StartCoroutine(WIP_Reactivate(player.gameObject));
             
@@ -55,6 +57,7 @@ namespace Assets._Code
 			var player = triggerer.GetComponent<PlayerController>();
 			if (player != null)
 			{
+				player.AddReward(- RaceManager.Instance.Data._pointLostForDeath);
 				player.gameObject.SetActive(false);
 				player.StartCoroutine(WIP_Reactivate(player.gameObject));
             

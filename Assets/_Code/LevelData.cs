@@ -22,6 +22,9 @@ namespace Assets._Code
 		[SerializeField] public Transform _characterParent;
 		
 		
+		[SerializeField] public int _pointLostForDeath = 500;
+		
+		
 
 
 

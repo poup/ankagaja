@@ -25,6 +25,11 @@ namespace LimProject.Maximini.Race
 		
 		private LevelData _data;
 
+		public LevelData Data
+		{
+			get { return _data; }
+		}
+
 //    [SerializeField]
 //    private StartCountDown _countDownUI;    
 //    [SerializeField]
