@@ -63,7 +63,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1363591993028840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4439707355107102}
@@ -97,6 +97,8 @@ MonoBehaviour:
   m_beforeSpawnDuration: 0
   m_killingBoxPrefab:
   - {fileID: 114947463910806218, guid: d304b8803b9bed9468ee11cdbdaaf48e, type: 2}
+  - {fileID: 114947463910806218, guid: a59baccc0ed7c06498902dcdc3d1f9c9, type: 2}
+  - {fileID: 114947463910806218, guid: a59baccc0ed7c06498902dcdc3d1f9c9, type: 2}
   - {fileID: 114947463910806218, guid: a59baccc0ed7c06498902dcdc3d1f9c9, type: 2}
   m_waveCount: 10
   m_timeBetweenWave: 1
