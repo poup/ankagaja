@@ -22,7 +22,7 @@ namespace LimProject.Maximini.Race
 
 		#endregion
 
-		public PlayerController _characterPrefab;
+		public PlayerController[] _characterPrefabs;
 		
 		private LevelData _data;
 
@@ -155,12 +155,15 @@ namespace LimProject.Maximini.Race
 //			if (PlayersManager.Instance.Players.Count == 0)
 				; //InputsManager.Instance.ForceCreateMainPlayer();
 
-			foreach (var p in PlayersManager.Instance.Players)
+			var players = PlayersManager.Instance.Players;
+			for (var index = 0; index < players.Count; index++)
 			{
-				//_data._StartPoints
+				var p = players[index];
+				var prefab = _characterPrefabs[index % _characterPrefabs.Length];
+//_data._StartPoints
 				//var ship = PrefabUtility.InstantiatePrefab(_shipPrefab);
 
-				var character = Instantiate(_characterPrefab);
+				var character = Instantiate(prefab);
 
 				character.transform.SetParent(transform);
 				character.transform.SetParent(null);
@@ -168,11 +171,11 @@ namespace LimProject.Maximini.Race
 
 				character.Input = p.Input;
 				character.Player = p;
-				
+
 //        controller.Color = p.Color;
 
 				character.transform.parent = _data._characterParent;
-        character.transform.position = _data._spawPoints[i].position;
+				character.transform.position = _data._spawPoints[i].position;
 
 				characters.Add(character);
 
