@@ -71,6 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4262759121571908}
   - component: {fileID: 212816490687216810}
+  - component: {fileID: 114515387659217570}
   - component: {fileID: 95183875855410280}
   - component: {fileID: 111862671150757192}
   m_Layer: 9
@@ -95,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4120080691020706
 Transform:
   m_ObjectHideFlags: 1
@@ -279,7 +280,7 @@ TrailRenderer:
   m_SortingLayerID: -833570393
   m_SortingLayer: 2
   m_SortingOrder: -1
-  m_Time: 1.5
+  m_Time: 0
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 0.2
@@ -351,6 +352,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114515387659217570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1879508747144712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ec8c0be8f9b9c418e2c9202cc9b44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swappedTexture: {fileID: 2800000, guid: d89a8d6236702b04b864a14517d299da, type: 3}
 --- !u!114 &114643545265220640
 MonoBehaviour:
   m_ObjectHideFlags: 1
