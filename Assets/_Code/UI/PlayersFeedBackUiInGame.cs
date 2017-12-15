@@ -7,7 +7,7 @@ namespace Assets._Code.UI
 {
 	public class PlayersFeedBackUiInGame : MonoBehaviour
 	{
-		[SerializeField] private Image[] _player;
+		[SerializeField] private GameObject[] _player;
 		private Text[] _playerText;
 		
 		private void Awake()
@@ -17,7 +17,7 @@ namespace Assets._Code.UI
 			int i = 0;
 			foreach (var p in _player)
 			{
-				p.gameObject.SetActive(false);
+				p.SetActive(false);
 				_playerText[i] = p.gameObject.GetComponentInChildren<Text>();
 
 				i++;
@@ -34,7 +34,7 @@ namespace Assets._Code.UI
 			{
 				if (activeIndex-1 >= 0 && activeIndex-1 < _player.Length)
 				{
-					_player[activeIndex-1].gameObject.SetActive(true);
+					_player[activeIndex-1].SetActive(true);
 					
 				}
 			}
@@ -54,7 +54,7 @@ namespace Assets._Code.UI
 		{
 			if (newPlayer.InputIndex-1 >= 0 && newPlayer.InputIndex-1 < _player.Length)
 			{
-				_player[newPlayer.InputIndex-1].gameObject.SetActive(true);
+				_player[newPlayer.InputIndex-1].SetActive(true);
 			}
 		}
 
@@ -62,7 +62,7 @@ namespace Assets._Code.UI
 		{
 			if (p.InputIndex-1 >= 0 && p.InputIndex-1 < _player.Length)
 			{
-				_player[p.InputIndex-1].gameObject.SetActive(false);
+				_player[p.InputIndex-1].SetActive(false);
 			}
 		}
 
