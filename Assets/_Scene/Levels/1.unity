@@ -381,6 +381,18 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
   m_IsPrefabParent: 0
@@ -425,6 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 347901741}
   - component: {fileID: 347901742}
+  - component: {fileID: 347901743}
   m_Layer: 0
   m_Name: light (6)
   m_TagString: Untagged
@@ -489,6 +502,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &347901743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 347901740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c89ee03c169e04d84e0fe01433113c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerForce: 0.008
+  flickerMinTime: 0.08
+  flickerMaxTime: 0.16
 --- !u!1001 &800514372
 Prefab:
   m_ObjectHideFlags: 0
@@ -527,6 +554,21 @@ Prefab:
     - target: {fileID: 4888927571064744, guid: be3145323e9de084aa5b54b0a5442270, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212423530206957882, guid: be3145323e9de084aa5b54b0a5442270,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -114100405
+      objectReference: {fileID: 0}
+    - target: {fileID: 212423530206957882, guid: be3145323e9de084aa5b54b0a5442270,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212423530206957882, guid: be3145323e9de084aa5b54b0a5442270,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be3145323e9de084aa5b54b0a5442270, type: 2}
@@ -767,6 +809,18 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
   m_IsPrefabParent: 0
@@ -815,6 +869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 875927358}
   - component: {fileID: 875927359}
+  - component: {fileID: 875927360}
   m_Layer: 0
   m_Name: light (3)
   m_TagString: Untagged
@@ -879,6 +934,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &875927360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 875927357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c89ee03c169e04d84e0fe01433113c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerForce: 0.008
+  flickerMinTime: 0.08
+  flickerMaxTime: 0.16
 --- !u!1001 &917987059
 Prefab:
   m_ObjectHideFlags: 0
@@ -888,7 +957,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4888927571064744, guid: be3145323e9de084aa5b54b0a5442270, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -6.32
       objectReference: {fileID: 0}
     - target: {fileID: 4888927571064744, guid: be3145323e9de084aa5b54b0a5442270, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1007,6 +1076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1056630057}
   - component: {fileID: 1056630058}
+  - component: {fileID: 1056630059}
   m_Layer: 0
   m_Name: light (5)
   m_TagString: Untagged
@@ -1071,6 +1141,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1056630059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1056630056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c89ee03c169e04d84e0fe01433113c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerForce: 0.008
+  flickerMinTime: 0.08
+  flickerMaxTime: 0.16
 --- !u!1 &1068906370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,6 +1295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1140898681}
   - component: {fileID: 1140898682}
+  - component: {fileID: 1140898683}
   m_Layer: 0
   m_Name: light (2)
   m_TagString: Untagged
@@ -1275,6 +1360,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1140898683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1140898680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c89ee03c169e04d84e0fe01433113c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerForce: 0.008
+  flickerMinTime: 0.08
+  flickerMaxTime: 0.16
 --- !u!1 &1147910401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,6 +1383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1147910402}
   - component: {fileID: 1147910403}
+  - component: {fileID: 1147910404}
   m_Layer: 0
   m_Name: light (4)
   m_TagString: Untagged
@@ -1348,6 +1448,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1147910404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147910401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c89ee03c169e04d84e0fe01433113c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerForce: 0.008
+  flickerMinTime: 0.08
+  flickerMaxTime: 0.16
 --- !u!1 &1152542287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,6 +1883,18 @@ Prefab:
     - target: {fileID: 19800000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: ba240239a4f595044bfaa09e44605ad8, type: 2}
       propertyPath: ShapeModule.radiusThickness
