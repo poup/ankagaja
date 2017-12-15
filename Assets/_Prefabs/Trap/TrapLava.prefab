@@ -85,8 +85,8 @@ MonoBehaviour:
   m_killingBoxPrefab:
   - {fileID: 114326139512281084, guid: ad6325f3d9adbec4baac5c4bdaa3a385, type: 2}
   m_deadStateName: 
-  m_lavaCellCount: 30
-  m_timeBetweenSpawn: 0.25
+  m_lavaCellCount: 400
+  m_timeBetweenSpawn: 0.02
   m_actionOnTrigger: 2
 --- !u!114 &114530913552422156
 MonoBehaviour:
@@ -99,5 +99,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002505aa378344e9a55164e2bee36976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_width: 16
-  m_height: 12
+  m_width: 5
+  m_height: 5
