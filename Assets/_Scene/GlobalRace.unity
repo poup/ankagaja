@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_traps:
-  - {fileID: 114727951370119186, guid: 0fa7ba51e7d964c43974415864d8126f, type: 2}
+  - {fileID: 114727951370119186, guid: efadfa22c8dbfe247aa2d00631f32687, type: 2}
 --- !u!4 &1020322141
 Transform:
   m_ObjectHideFlags: 0
