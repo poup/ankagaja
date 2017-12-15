@@ -88,6 +88,7 @@ MonoBehaviour:
   m_lavaCellCount: 400
   m_timeBetweenSpawn: 0.02
   m_actionOnTrigger: 2
+  m_dontTriggerInjump: 1
 --- !u!114 &114530913552422156
 MonoBehaviour:
   m_ObjectHideFlags: 1
