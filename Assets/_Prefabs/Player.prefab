@@ -341,7 +341,7 @@ MonoBehaviour:
   m_dashDuration: 0.4
   m_dashSpeedBonus: 0
   m_dashWeightBonus: 0
-  m_jumpDuration: 0.25
+  m_jumpDuration: 0.4
   m_jumpCurve:
     serializedVersion: 2
     m_Curve:
