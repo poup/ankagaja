@@ -1,4 +1,4 @@
-﻿using UnityEditor;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace Assets._Code
@@ -11,14 +11,20 @@ namespace Assets._Code
 		{
 			if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
 			{
-				var playerController = other.transform.parent.GetComponent<PlayerController>();
+				var playerController = other.transform.GetComponent<PlayerController>();
 				if (playerController != null)
 				{
-
 					playerController.AddReward(value);
-					Destroy(this.gameObject);
+					StartCoroutine(AutoDestroy());
 				}
 			}
+		}
+
+		private IEnumerator AutoDestroy()
+		{
+			// TODO animation ???
+			yield return null;
+			Destroy(this.gameObject);
 		}
 	}
 }
