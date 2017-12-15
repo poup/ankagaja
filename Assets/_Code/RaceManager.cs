@@ -78,6 +78,7 @@ namespace LimProject.Maximini.Race
 
 		private void OnEnd(GameObject triggered, Collider2D triggerer)
 		{
+			TrapManager.Instance.RoomEnded();
 			GameLoopManager.Instance.RoomEnded();
 		}
 
