@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0061462bc4284bf59354737e6d342756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_score1: {fileID: 0}
-  m_score2: {fileID: 0}
-  m_score3: {fileID: 0}
-  m_score4: {fileID: 0}
+  m_score1: {fileID: 1525552295}
+  m_score2: {fileID: 600206464}
+  m_score3: {fileID: 1595116936}
+  m_score4: {fileID: 1823195427}
