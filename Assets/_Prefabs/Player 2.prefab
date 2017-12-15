@@ -367,7 +367,7 @@ MonoBehaviour:
   m_rigidBody: {fileID: 50075313073012682}
   m_animator: {fileID: 95183875855410280}
   m_speedMax: 10
-  m_acceleration: 550
+  m_acceleration: 800
   m_playerContactFactor: 3000
   m_dashDuration: 0.4
   m_dashSpeedBonus: 10

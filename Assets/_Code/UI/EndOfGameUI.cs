@@ -29,6 +29,11 @@ namespace Assets._Code.UI
         {
             if (InputsManager.Instance.MainPlayerInput.Get.A())
             {
+                foreach (var player in PlayersManager.Instance.Players)
+                {
+                    player.Reset();
+                }
+                
                 FSM.Instance.GotoState<LobbyState>();
             }
         }
