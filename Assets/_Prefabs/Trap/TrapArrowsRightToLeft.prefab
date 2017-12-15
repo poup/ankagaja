@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4577821978479908}
   - component: {fileID: 114727951370119186}
   m_Layer: 0
-  m_Name: TrapArrowsLeftToRight
+  m_Name: TrapArrowsRightToLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,6 +103,6 @@ MonoBehaviour:
   m_timeBetweenSpawnMax: 0.06
   m_spawnNumberMin: 40
   m_spawnNumberMax: 50
-  m_hasDirection: 0
-  m_direction: {x: 0, y: 0}
+  m_hasDirection: 1
+  m_direction: {x: -1, y: 0}
   m_deadStateName: 

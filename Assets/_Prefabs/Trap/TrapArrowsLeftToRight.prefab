@@ -103,6 +103,6 @@ MonoBehaviour:
   m_timeBetweenSpawnMax: 0.06
   m_spawnNumberMin: 40
   m_spawnNumberMax: 50
-  m_hasDirection: 0
-  m_direction: {x: 0, y: 0}
+  m_hasDirection: 1
+  m_direction: {x: 1, y: 0}
   m_deadStateName: 
