@@ -46,7 +46,7 @@ namespace Assets._Code.UI
 			for (int i = 0; i < PlayersManager.Instance.Players.Count; i++)
 			{
 				var player = PlayersManager.Instance.Players[i];
-				_playerText[i].text = "" + player.Value;
+				_playerText[player.Input.InputIndex-1].text = "" + player.Value;
 			}
 		}
 
