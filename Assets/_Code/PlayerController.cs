@@ -41,8 +41,13 @@ public class PlayerController : MonoBehaviour
 	
 	public bool IsJumping { get { return m_jumpTime >= 0;  } }
 	public bool IsDashing { get { return m_dashTime >= 0;  } }
-	
-	public bool IsDead { get; set; }
+
+	public bool IsDead
+	{
+		get { return m_isDead; }
+		set { m_isDead = value;
+			m_animator.SetBool("dead", value);}
+	}
 
 	private float m_currentMaxSpeed;
 
@@ -112,14 +117,21 @@ public class PlayerController : MonoBehaviour
 			m_moveY = y;
 		}
 
-		m_animator.SetFloat("moveX", x);
-		m_animator.SetFloat("moveY", y);
-		m_animator.SetFloat("dirX", m_dirX);
-		m_animator.SetFloat("dirY", m_dirY);
+		if (IsDead)
+		{
+			m_animator.SetBool("dead", true);
+		}
+		else
+		{
+			m_animator.SetFloat("moveX", x);
+			m_animator.SetFloat("moveY", y);
+			m_animator.SetFloat("dirX", m_dirX);
+			m_animator.SetFloat("dirY", m_dirY);
 
-		m_animator.SetBool("isMoving", isMoving);
-		m_animator.SetBool("isJumping", IsJumping);
-		m_animator.SetBool("isDashing", IsDashing);
+			m_animator.SetBool("isMoving", isMoving);
+			m_animator.SetBool("isJumping", IsJumping);
+			m_animator.SetBool("isDashing", IsDashing);
+		}
 	}
 
 	private void DashingUpdate(bool dash, float dt)
@@ -135,7 +147,7 @@ public class PlayerController : MonoBehaviour
 			}
 
 			m_rigidBody.AddForce(m_currentDashDirection * dt * m_acceleration * m_keepDashForce,ForceMode2D.Force);
-			
+
 			return;
 		}
 
@@ -155,7 +167,7 @@ public class PlayerController : MonoBehaviour
 //			m_dashTime = 0.0f;
 //			dashing = true;
 //		}
-//		
+//
 //		if (dashing)
 //		{
 //			m_dashTime += dt;
@@ -170,17 +182,17 @@ public class PlayerController : MonoBehaviour
 	{
 		if (IsDashing)
 			return;
-		
+
 		var jumping = IsJumping;
 		if (!jumping && jump)
 		{
 			m_jumpTime = 0.0f;
 			jumping = true;
 		}
-		
+
 		if (jumping)
 		{
-			m_jumpTime += dt; 
+			m_jumpTime += dt;
 			if (m_jumpTime > m_jumpDuration)
 			{
 				m_jumpTime = -1;
@@ -196,7 +208,7 @@ public class PlayerController : MonoBehaviour
 		_impactDelay -= Time.fixedDeltaTime;
 		if (IsDashing)
 			return;
-		
+
 		var move = new Vector2(m_moveX, m_moveY) * m_acceleration;
 		m_rigidBody.AddForce(move);
 
@@ -208,6 +220,8 @@ public class PlayerController : MonoBehaviour
 	}
 
 	private float _impactDelay = -1;
+	private bool m_isDead;
+
 	private void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.CompareTag("Player") && other.gameObject != gameObject && _impactDelay<=0)
@@ -236,6 +250,7 @@ public class PlayerController : MonoBehaviour
 
 	public void ShowGrosYeux(bool show)
 	{
+		m_characterRenderTransform.gameObject.SetActive(!show);
 		m_eyesInNight.gameObject.SetActive(show);
 		GetComponent<SortingGroup>().enabled = !show;
 	}

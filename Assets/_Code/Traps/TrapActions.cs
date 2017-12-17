@@ -42,17 +42,27 @@ namespace Assets._Code
 			var player = triggerer.GetComponent<PlayerController>();
 			if (player != null)
 			{
-				player.AddReward(- RaceManager.Instance.Data._pointLostForDeath);
-				player.gameObject.SetActive(false);
-				player.IsDead = true;
-				player.StartCoroutine(WIP_Reactivate(player.gameObject));
-            
-				player.PlayAnimState(spawner.m_deadStateName);
-
-				RaceManager.Instance.CheckAllDead();
+				CoroutineManager.Instance.StartCoroutine(Kill(player));
 			}
-			
-			GameObject.Destroy(triggered.gameObject);
+			else
+			{
+				GameObject.Destroy(triggered.gameObject);
+			}
+		}
+
+		private static IEnumerator Kill(PlayerController player)
+		{
+			if (player.IsDead)
+				yield break;
+
+			player.AddReward(-RaceManager.Instance.Data._pointLostForDeath);
+			player.IsDead = true;
+			player.enabled = false;
+			yield return new WaitForSeconds(2.0f);
+
+			player.gameObject.SetActive(false);
+			RaceManager.Instance.CheckAllDead();
+			GameObject.Destroy(player.gameObject);
 		}
 
 		private static void HurnAndContinue(TrapSpawner spawner,GameObject triggered, Collider2D triggerer)
@@ -60,13 +70,7 @@ namespace Assets._Code
 			var player = triggerer.GetComponent<PlayerController>();
 			if (player != null)
 			{
-				player.AddReward(- RaceManager.Instance.Data._pointLostForDeath);
-				player.gameObject.SetActive(false);
-				player.IsDead = true;
-				player.StartCoroutine(WIP_Reactivate(player.gameObject));
-            
-				player.PlayAnimState(spawner.m_deadStateName);
-				RaceManager.Instance.CheckAllDead();
+				CoroutineManager.Instance.StartCoroutine(Kill(player));
 			}
 		}
 		
