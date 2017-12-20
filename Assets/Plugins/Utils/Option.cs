@@ -1,6 +1,4 @@
-﻿using UnityEditor;
-
-namespace Plugins.Utils
+﻿namespace Plugins.Utils
 {
   public class Option<T>
   {

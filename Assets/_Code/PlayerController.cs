@@ -1,7 +1,6 @@
 using Assets.Scripts.PlayerManagement;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.WSA;
 
 public class PlayerController : MonoBehaviour
 {
@@ -136,23 +135,26 @@ public class PlayerController : MonoBehaviour
 
 	private void DashingUpdate(bool dash, float dt)
 	{
+		dt = 0.016f;
 		if (IsDashing)
 		{
+			Debug.LogError("Dashing " + IsDashing + "dt " + dt + "    " + m_dashTime);
 			m_dashTime -= dt;
 			var speed = m_rigidBody.velocity.magnitude;
-			if (speed <= m_speedMax * 1.1)
+			if (speed <= m_speedMax * 1.0)
 			{
+				Debug.LogError("stop dash");
 				m_dashTime = -1;
 				m_currentMaxSpeed = m_speedMax;
 			}
-
+			
 			m_rigidBody.AddForce(m_currentDashDirection * dt * m_acceleration * m_keepDashForce,ForceMode2D.Force);
 
 			return;
 		}
-
 		if (dash)
 		{
+			Debug.LogError("Dashingtruc " + dash+ "dt " + dt);
 			m_dashTime = 2.0f;
 
 			m_currentMaxSpeed = m_speedMax + m_dashSpeedBonus;
